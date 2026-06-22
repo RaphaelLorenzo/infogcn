@@ -12,7 +12,7 @@ import resource
 
 from collections import OrderedDict
 
-import apex
+# import apex
 import torch
 import torch.optim as optim
 import numpy as np
@@ -69,14 +69,14 @@ class Processor():
 
         model = self.model.cuda()
 
-        if self.arg.half:
-            self.model, self.optimizer = apex.amp.initialize(
-                model,
-                self.optimizer,
-                opt_level=f'O{self.arg.amp_opt_level}'
-            )
-            if self.arg.amp_opt_level != 1:
-                self.print_log('[WARN] nn.DataParallel is not yet supported by amp_opt_level != "O1"')
+        # if self.arg.half:
+        #     self.model, self.optimizer = apex.amp.initialize(
+        #         model,
+        #         self.optimizer,
+        #         opt_level=f'O{self.arg.amp_opt_level}'
+        #     )
+        #     if self.arg.amp_opt_level != 1:
+        #         self.print_log('[WARN] nn.DataParallel is not yet supported by amp_opt_level != "O1"')
 
         # self.model = torch.nn.DataParallel(model, device_ids=(0,1,2))
 
@@ -266,11 +266,12 @@ class Processor():
             loss = self.arg.lambda_2* mmd_loss + self.arg.lambda_1* l2_z_mean + cls_loss
             # backward
             self.optimizer.zero_grad()
-            if self.arg.half:
-                with apex.amp.scale_loss(loss, self.optimizer) as scaled_loss:
-                    scaled_loss.backward()
-            else:
-                loss.backward()
+            # if self.arg.half:
+            #     with apex.amp.scale_loss(loss, self.optimizer) as scaled_loss:
+            #         scaled_loss.backward()
+            # else:
+            #     loss.backward()
+            loss.backward()
 
             self.optimizer.step()
 

@@ -5,3 +5,4 @@ __pycache__
 *ipynb
 *.pt
 *.yaml
+data/NW-UCLA/all_sqe/

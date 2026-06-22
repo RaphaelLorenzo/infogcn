@@ -1,0 +1,76 @@
+[ Mon Jun 22 19:03:37 2026 ] using warm up, epoch: 5
+[ Mon Jun 22 19:03:41 2026 ] Parameters:
+{'debug': False, 'log_dir': '.', 'model_saved_name': '', 'noise_ratio': 0.5, 'n_desired': 40000, 'num_point': 20, 'num_person': 1, 'num_class': 10, 'dataset': 'ucla', 'datacase': 'ucla', 'use_vel': False, 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 1, 'save_epoch': 60, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder_ucla.Feeder', 'num_worker': 4, 'balanced_sampling': False, 'random_rot': True, 'repeat': 1, 'weights': None, 'ignore_weights': [], 'n_heads': 3, 'k': 1, 'z_prior_gain': 3, 'graph': 'graph.ucla.Graph', 'base_lr': 0.05, 'step': [90, 100], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 110, 'weight_decay': 0.0004, 'lr_decay_rate': 0.1, 'warm_up_epoch': 5, 'lambda_1': 0.1, 'lambda_2': 0.1, 'half': True, 'amp_opt_level': 1, 'work_dir': 'results/ucla_ucla'}
+
+[ Mon Jun 22 19:03:41 2026 ] # Parameters: 1533722
+[ Mon Jun 22 19:03:41 2026 ] Training epoch: 1
+[ Mon Jun 22 19:04:33 2026 ] using warm up, epoch: 5
+[ Mon Jun 22 19:04:37 2026 ] Parameters:
+{'debug': False, 'log_dir': '.', 'model_saved_name': '', 'noise_ratio': 0.5, 'n_desired': 40000, 'num_point': 20, 'num_person': 1, 'num_class': 10, 'dataset': 'ucla', 'datacase': 'ucla', 'use_vel': False, 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 1, 'save_epoch': 60, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder_ucla.Feeder', 'num_worker': 4, 'balanced_sampling': False, 'random_rot': True, 'repeat': 1, 'weights': None, 'ignore_weights': [], 'n_heads': 3, 'k': 1, 'z_prior_gain': 3, 'graph': 'graph.ucla.Graph', 'base_lr': 0.05, 'step': [90, 100], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 110, 'weight_decay': 0.0004, 'lr_decay_rate': 0.1, 'warm_up_epoch': 5, 'lambda_1': 0.1, 'lambda_2': 0.1, 'half': True, 'amp_opt_level': 1, 'work_dir': 'results/ucla_ucla'}
+
+[ Mon Jun 22 19:04:37 2026 ] # Parameters: 1533722
+[ Mon Jun 22 19:04:37 2026 ] Training epoch: 1
+[ Mon Jun 22 19:05:07 2026 ] using warm up, epoch: 5
+[ Mon Jun 22 19:05:11 2026 ] Parameters:
+{'debug': False, 'log_dir': '.', 'model_saved_name': '', 'noise_ratio': 0.5, 'n_desired': 40000, 'num_point': 20, 'num_person': 1, 'num_class': 10, 'dataset': 'ucla', 'datacase': 'ucla', 'use_vel': False, 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 1, 'save_epoch': 60, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder_ucla.Feeder', 'num_worker': 4, 'balanced_sampling': False, 'random_rot': True, 'repeat': 1, 'weights': None, 'ignore_weights': [], 'n_heads': 3, 'k': 1, 'z_prior_gain': 3, 'graph': 'graph.ucla.Graph', 'base_lr': 0.05, 'step': [90, 100], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 110, 'weight_decay': 0.0004, 'lr_decay_rate': 0.1, 'warm_up_epoch': 5, 'lambda_1': 0.1, 'lambda_2': 0.1, 'half': True, 'amp_opt_level': 1, 'work_dir': 'results/ucla_ucla'}
+
+[ Mon Jun 22 19:05:11 2026 ] # Parameters: 1533722
+[ Mon Jun 22 19:05:11 2026 ] Training epoch: 1
+[ Mon Jun 22 19:05:36 2026 ] 	Training loss: 8.8270.  Training acc: 14.72%.
+[ Mon Jun 22 19:05:36 2026 ] 	Time consumption: [Data]02%, [Network]98%
+[ Mon Jun 22 19:05:36 2026 ] Eval epoch: 1
+[ Mon Jun 22 19:07:03 2026 ] using warm up, epoch: 5
+[ Mon Jun 22 19:07:07 2026 ] Parameters:
+{'debug': False, 'log_dir': '.', 'model_saved_name': '', 'noise_ratio': 0.5, 'n_desired': 40000, 'num_point': 20, 'num_person': 1, 'num_class': 10, 'dataset': 'ucla', 'datacase': 'ucla', 'use_vel': False, 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 1, 'save_epoch': 60, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder_ucla.Feeder', 'num_worker': 4, 'balanced_sampling': False, 'random_rot': True, 'repeat': 1, 'weights': None, 'ignore_weights': [], 'n_heads': 3, 'k': 1, 'z_prior_gain': 3, 'graph': 'graph.ucla.Graph', 'base_lr': 0.05, 'step': [90, 100], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 64, 'start_epoch': 0, 'num_epoch': 110, 'weight_decay': 0.0004, 'lr_decay_rate': 0.1, 'warm_up_epoch': 5, 'lambda_1': 0.1, 'lambda_2': 0.1, 'half': True, 'amp_opt_level': 1, 'work_dir': 'results/ucla_ucla'}
+
+[ Mon Jun 22 19:07:07 2026 ] # Parameters: 1533722
+[ Mon Jun 22 19:07:07 2026 ] Training epoch: 1
+[ Mon Jun 22 19:07:32 2026 ] 	Training loss: 8.6340.  Training acc: 15.13%.
+[ Mon Jun 22 19:07:32 2026 ] 	Time consumption: [Data]02%, [Network]98%
+[ Mon Jun 22 19:07:32 2026 ] Eval epoch: 1
+[ Mon Jun 22 19:07:36 2026 ] 	Mean test loss of 1250 batches: 2.091074.
+[ Mon Jun 22 19:07:36 2026 ] 	Top1: 31.68%
+[ Mon Jun 22 19:07:36 2026 ] 	Top5: 85.13%
+[ Mon Jun 22 19:07:36 2026 ] Training epoch: 2
+[ Mon Jun 22 19:08:02 2026 ] 	Training loss: 3.7327.  Training acc: 23.96%.
+[ Mon Jun 22 19:08:02 2026 ] 	Time consumption: [Data]02%, [Network]97%
+[ Mon Jun 22 19:08:02 2026 ] Eval epoch: 2
+[ Mon Jun 22 19:08:06 2026 ] 	Mean test loss of 1250 batches: 1.824149.
+[ Mon Jun 22 19:08:06 2026 ] 	Top1: 39.87%
+[ Mon Jun 22 19:08:06 2026 ] 	Top5: 87.93%
+[ Mon Jun 22 19:08:06 2026 ] Training epoch: 3
+[ Mon Jun 22 19:08:34 2026 ] 	Training loss: 1.8731.  Training acc: 39.82%.
+[ Mon Jun 22 19:08:34 2026 ] 	Time consumption: [Data]02%, [Network]97%
+[ Mon Jun 22 19:08:34 2026 ] Eval epoch: 3
+[ Mon Jun 22 19:08:38 2026 ] 	Mean test loss of 1250 batches: 1.608229.
+[ Mon Jun 22 19:08:38 2026 ] 	Top1: 49.78%
+[ Mon Jun 22 19:08:38 2026 ] 	Top5: 95.26%
+[ Mon Jun 22 19:08:38 2026 ] Training epoch: 4
+[ Mon Jun 22 19:09:08 2026 ] 	Training loss: 1.5304.  Training acc: 49.14%.
+[ Mon Jun 22 19:09:08 2026 ] 	Time consumption: [Data]02%, [Network]98%
+[ Mon Jun 22 19:09:08 2026 ] Eval epoch: 4
+[ Mon Jun 22 19:09:12 2026 ] 	Mean test loss of 1250 batches: 1.411237.
+[ Mon Jun 22 19:09:12 2026 ] 	Top1: 57.76%
+[ Mon Jun 22 19:09:12 2026 ] 	Top5: 95.47%
+[ Mon Jun 22 19:09:12 2026 ] Training epoch: 5
+[ Mon Jun 22 19:09:46 2026 ] 	Training loss: 1.4013.  Training acc: 55.42%.
+[ Mon Jun 22 19:09:46 2026 ] 	Time consumption: [Data]03%, [Network]97%
+[ Mon Jun 22 19:09:46 2026 ] Eval epoch: 5
+[ Mon Jun 22 19:09:51 2026 ] 	Mean test loss of 1250 batches: 1.448393.
+[ Mon Jun 22 19:09:51 2026 ] 	Top1: 51.72%
+[ Mon Jun 22 19:09:51 2026 ] 	Top5: 95.47%
+[ Mon Jun 22 19:09:51 2026 ] Training epoch: 6
+[ Mon Jun 22 19:10:28 2026 ] 	Training loss: 1.2980.  Training acc: 61.71%.
+[ Mon Jun 22 19:10:28 2026 ] 	Time consumption: [Data]03%, [Network]97%
+[ Mon Jun 22 19:10:28 2026 ] Eval epoch: 6
+[ Mon Jun 22 19:10:33 2026 ] 	Mean test loss of 1250 batches: 1.543106.
+[ Mon Jun 22 19:10:33 2026 ] 	Top1: 54.74%
+[ Mon Jun 22 19:10:33 2026 ] 	Top5: 91.81%
+[ Mon Jun 22 19:10:33 2026 ] Training epoch: 7
+[ Mon Jun 22 19:11:11 2026 ] 	Training loss: 1.2375.  Training acc: 65.92%.
+[ Mon Jun 22 19:11:11 2026 ] 	Time consumption: [Data]03%, [Network]97%
+[ Mon Jun 22 19:11:11 2026 ] Eval epoch: 7
+[ Mon Jun 22 19:11:16 2026 ] 	Mean test loss of 1250 batches: 1.374082.
+[ Mon Jun 22 19:11:16 2026 ] 	Top1: 60.56%
+[ Mon Jun 22 19:11:16 2026 ] 	Top5: 96.77%
+[ Mon Jun 22 19:11:16 2026 ] Training epoch: 8
