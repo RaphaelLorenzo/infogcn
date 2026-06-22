@@ -92,18 +92,18 @@ class InfoGCN(nn.Module):
         x = self.l1(x)
         x = self.l2(x)
         x = self.l3(x)
-        # print("x shape after l3 : ", x.shape)
+        # print("x shape after l3 : ", x.shape) # torch.Size([32, 64, 52, 20])
         x = self.l4(x)
-        # print("x shape after l4 : ", x.shape)
+        # print("x shape after l4 : ", x.shape) # torch.Size([32, 128, 26, 20])
         x = self.l5(x)
         x = self.l6(x)
-        # print("x shape after l6 : ", x.shape)
+        # print("x shape after l6 : ", x.shape) # torch.Size([32, 128, 26, 20])
         x = self.l7(x)
-        # print("x shape after l7 : ", x.shape)
+        # print("x shape after l7 : ", x.shape) # torch.Size([32, 256, 13, 20])
         x = self.l8(x)
         x = self.l9(x)
 
-        # print("x shape after encoding blocks : ", x.shape) # torch.Size([32, 256, 13, 20]), i.e. B, C, T//4, V
+        # print("x shape after encoding blocks : ", x.shape) # torch.Size([32, 256, 13, 20]), i.e. B, D, T//4, V
         
         # N*M,C,T,V
         c_new = x.size(1)
@@ -119,8 +119,8 @@ class InfoGCN(nn.Module):
         z_logvar = self.fc_logvar(x)
         z = self.latent_sample(z_mu, z_logvar)
         
-        # print("repr shape : ", z.shape)
+        # print("repr shape : ", z.shape)  # [B, D] with D = 256
 
-        y_hat = self.decoder(z) # [B, D] with D = 256
+        y_hat = self.decoder(z)
 
         return y_hat, z
