@@ -77,6 +77,9 @@ class InfoGCN(nn.Module):
 
     def forward(self, x):
         N, C, T, V, M = x.size()
+        # print(f"x shape : {x.shape}") # [32, 3, 52, 20, 1]
+        # print(f"N: {N}, C: {C}, T: {T}, V: {V}, M: {M}") # N: 32, C: 3, T: 52, V: 20, M: 1
+        
         x = rearrange(x, 'n c t v m -> (n m t) v c', m=M, v=V).contiguous()
         x = self.A_vector.to(x.device).expand(N*M*T, -1, -1) @ x
 
@@ -89,16 +92,25 @@ class InfoGCN(nn.Module):
         x = self.l1(x)
         x = self.l2(x)
         x = self.l3(x)
+        # print("x shape after l3 : ", x.shape)
         x = self.l4(x)
+        # print("x shape after l4 : ", x.shape)
         x = self.l5(x)
         x = self.l6(x)
+        # print("x shape after l6 : ", x.shape)
         x = self.l7(x)
+        # print("x shape after l7 : ", x.shape)
         x = self.l8(x)
         x = self.l9(x)
 
+        # print("x shape after encoding blocks : ", x.shape) # torch.Size([32, 256, 13, 20]), i.e. B, C, T//4, V
+        
         # N*M,C,T,V
         c_new = x.size(1)
         x = x.view(N, M, c_new, -1)
+        
+        # print("x shape before averaging : ", x.shape)
+        
         x = x.mean(3).mean(1)
         x = F.relu(self.fc(x))
         x = self.drop_out(x)
@@ -106,7 +118,9 @@ class InfoGCN(nn.Module):
         z_mu = self.fc_mu(x)
         z_logvar = self.fc_logvar(x)
         z = self.latent_sample(z_mu, z_logvar)
+        
+        # print("repr shape : ", z.shape)
 
-        y_hat = self.decoder(z)
+        y_hat = self.decoder(z) # [B, D] with D = 256
 
         return y_hat, z
