@@ -397,6 +397,7 @@ class Processor():
                 self.eval(epoch, save_score=self.arg.save_score, loader_name=['test'])
 
             # test the best model
+            print("Looking for best model in: ", self.arg.work_dir, "at : ", os.path.join(self.arg.work_dir, 'runs-'+str(self.best_acc_epoch)+'*'))
             weights_path = glob.glob(os.path.join(self.arg.work_dir, 'runs-'+str(self.best_acc_epoch)+'*'))[0]
             weights = torch.load(weights_path)
             self.model.load_state_dict(weights)
@@ -421,7 +422,7 @@ class Processor():
             if self.arg.weights is None:
                 raise ValueError('Please appoint --weights.')
             self.arg.print_log = False
-            self.print_log('Model:   {}.'.format(self.arg.model))
+            # self.print_log('Model:   {}.'.format(self.arg.model))
             self.print_log('Weights: {}.'.format(self.arg.weights))
             self.eval(epoch=0, save_score=self.arg.save_score, loader_name=['test'], save_z=True)
             self.print_log('Done.\n')

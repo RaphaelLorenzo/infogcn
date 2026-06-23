@@ -77,8 +77,8 @@ class InfoGCN(nn.Module):
 
     def forward(self, x):
         N, C, T, V, M = x.size()
-        # print(f"x shape : {x.shape}") # [32, 3, 52, 20, 1]
-        # print(f"N: {N}, C: {C}, T: {T}, V: {V}, M: {M}") # N: 32, C: 3, T: 52, V: 20, M: 1
+        # print(f"x shape : {x.shape}") # [32, 3, 52, 20, 1]
+        # print(f"N: {N}, C: {C}, T: {T}, V: {V}, M: {M}") # N: 32, C: 3, T: 52, V: 20, M: 1
         
         x = rearrange(x, 'n c t v m -> (n m t) v c', m=M, v=V).contiguous()
         x = self.A_vector.to(x.device).expand(N*M*T, -1, -1) @ x
